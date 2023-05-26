@@ -1,0 +1,5 @@
+SELECT type, *
+FROM sys.objects
+WHERE OBJECT_DEFINITION(object_id) LIKE '%' + 'abc' + '%'
+AND type IN ('V')
+ORDER BY name
